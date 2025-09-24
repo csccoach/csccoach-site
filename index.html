@@ -123,16 +123,21 @@
       <h2 class="section-title">Join free</h2>
       <div class="grid cols-2">
         <div class="card">
-          <form action="https://formspree.io/f/your-id" method="POST">
-            <div class="row">
-              <input name="first_name" placeholder="First name" required />
-              <input name="email" type="email" placeholder="Email" required />
-              <input name="exam_date" type="text" placeholder="Target exam month (e.g., Nov 2025)" />
-              <textarea name="goal" rows="3" placeholder="Your top 1–2 weak areas"></textarea>
-              <label style="font-size:13px;color:#cbd5e1"><input type="checkbox" name="consent" required /> I agree to receive study emails and session links (unsubscribe anytime).</label>
-              <button class="btn" type="submit">Email me the Starter Kit</button>
-            </div>
-          </form>
+          <!-- Google Form embed -->
+<div class="gform-embed">
+  <iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLSeR5ul6fXVmu7nZgytThrRttDiFt5Gm4Qok3Wt4x-bYhOlvRQ/viewform?embedded=true"
+    width="100%" height="1100" frameborder="0" marginheight="0" marginwidth="0">
+    Loading…
+  </iframe>
+</div>
+
+<style>
+  /* keep this small helper here or move to a CSS file later */
+  .gform-embed iframe { width: 100%; border: 0; }
+  @media (max-width: 480px) { .gform-embed iframe { height: 1250px; } }
+</style>
+
           <p class="muted" style="margin-top:10px">No spam. We email only key updates and links.</p>
         </div>
         <div class="card">

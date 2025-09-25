@@ -41,21 +41,50 @@
 .signup-wrap{max-width:1100px;margin:auto;padding:24px 16px}
 .signup-grid{display:grid;gap:20px;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)}
 @media (max-width:960px){ .signup-grid{grid-template-columns:1fr} }
-
-.form-frame{background:#0b1226;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:8px}
-.form-iframe{width:100%;min-height:1300px;border:0;border-radius:10px;display:block}
+.form-frame{background:#0f172a;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:10px}
+.form-iframe{width:100%;min-height:1200px;border:0;border-radius:10px;display:block}
 @media (min-width:1100px){ .form-iframe{min-height:1200px} }
 
-.sidebar{background:#0f172a;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px;color:#e2e8f0}
+.sidebar{background:#0f172a;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:16px;color:#e2e8f0}
 .sidebar h3{margin:0 0 8px}
 .sidebar p,.sidebar li{opacity:.9}
+
 .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-.badge{background:#0b1226;border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:6px 10px;font-size:.9rem}
+.badge{background:#0b1226;border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:6px 10px;font-size:.9rem;font-weight:600}
+
 .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
-.kpis div{background:#0b1226;border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:10px;text-align:center}
+.kpis div{background:#0b1226;border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:10px;text-align:center;font-weight:700}
+
 .cta-btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:10px;background:#22c55e;color:#0b1020;font-weight:700;text-decoration:none}
+
+.faq details{background:#0b1226;border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:10px;margin-top:8px;transition:background .2s}
+.faq details[open]{background:#0b1226}
+.faq summary{cursor:pointer;font-weight:600}
+
 .faq details{background:#0b1226;border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:10px;margin-top:8px}
 .faq summary{cursor:pointer;font-weight:600}
+/* ===== Global type rhythm & containers ===== */
+:root{ --container:1120px; --radius:16px; }
+.container{max-width:var(--container);margin:0 auto;padding:24px 16px}
+h1,h2,h3{letter-spacing:.2px}
+.hero h1{font-weight:800;line-height:1.05;font-size:clamp(32px,4.2vw,54px);margin:10px 0 12px}
+.hero p{font-size:18px;opacity:.92}
+
+/* Buttons */
+.btn{display:inline-block;padding:12px 16px;border-radius:12px;font-weight:700}
+.btn.primary{background:#22c55e;color:#0b1020}
+.btn.secondary{background:#2a3346;color:#e2e8f0}
+.btn:hover{filter:brightness(1.05)}
+.btn:focus-visible{outline:2px solid #22c55e;outline-offset:2px}
+
+/* Cards/sections */
+.card{background:#0f172a;border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:20px}
+.section-title{font-size:28px;margin:22px 0 12px}
+.muted{color:#94a3b8}
+
+/* Syllabus card hover */
+.grid .card:hover{transform:translateY(-1px);transition:transform .15s ease}
+.grid .card p{opacity:.9}
 </style>
 </head>
 <body>
@@ -69,9 +98,10 @@
           <li><a href="#sessions">Live Sessions</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li>
-  <a href="https://whatsapp.com/channel/0029Vb6I3QQHrDZjnvCGEP3Y" target="_blank" rel="noopener">
-    🟢 CSC WhatsApp Channel
-  </a>
+  <a href="https://whatsapp.com/channel/0029Vb6I3QQHrDZjnvCGEP3Y" target="_blank" rel="noopener"
+   aria-label="Open CSC Coach WhatsApp Channel">
+  🟢 CSC WhatsApp Channel
+</a>
 </li>
         </ul>
         <a class="btn" href="#join">Join Free</a>
